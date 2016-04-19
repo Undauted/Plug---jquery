@@ -41,7 +41,7 @@ form ul li:last-child {
     text-align:center;
     margin:20px 0 25px 0;
 }
-input {
+input#email {
     padding:10px 10px;
     border:1px solid #d5d9da;
     border-radius:5px;
@@ -50,12 +50,43 @@ input {
     font-size:1em;
     outline:0; 
 }
+input#username{
+    padding:10px 10px;
+    border:1px solid #d5d9da;
+    border-radius:5px;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width:328px; 
+    font-size:1em;
+    outline:0; 
+}
+
+input#pswd{
+    padding:10px 10px;
+    border:1px solid #d5d9da;
+    border-radius:5px;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width:328px; 
+    font-size:1em;
+    outline:0; 
+}
+
+input#pswd-repeat{
+    padding:10px 10px;
+    border:1px solid #d5d9da;
+    border-radius:5px;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width:328px; 
+    font-size:1em;
+    outline:0; 
+}
+
 input:focus {
     border:1px solid #b9d4e9;
     border-top-color:#b6d5ea;
     border-bottom-color:#b8d4ea;
     box-shadow:0 0 5px #b9d4e9;
 }
+
 label {
     color:#555;
 }
