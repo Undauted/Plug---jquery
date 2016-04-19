@@ -7,5 +7,12 @@ $(document).ready(function (){
 	$('#pswd-repeat').requiredField();
 	
 	
+	$('#username').input( {text: "Wpisz nazwe uzytkownika"}).addClass("Color");
+	$('#email').input( {text: "Wpisz email"}).addClass("Color");
+	$('#pswd').input().addClass("Color");
+	$('#pswd-repeat').input().addClass("Color");
+	
+	
+
 
 });
