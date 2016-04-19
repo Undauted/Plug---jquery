@@ -1,5 +1,5 @@
 body {
-    background:#edf1f4 url(bg.jpg);
+    background:lightgray;
     font-family: "Segoe UI";
     font-size:16px;
     color:#444;
@@ -12,19 +12,21 @@ ul, li {
 #container {
     width:400px;
     padding:0px;
-    background:#fefefe;
+    background:lightyellow;
     margin:0 auto;
-    border:1px solid #c4cddb;
+	margin-top: 10%;
+    border:15px solid #c4cddb;
     border-top-color:#d3dbde;
     border-bottom-color:#bfc9dc;
-    box-shadow:0 1px 1px #ccc;
+    box-shadow: 10px 10px 5px 10px rgba(0,0,0,0.75);
     border-radius:5px;
     position:relative;
 }
+
 h1 {
     margin:0;
     padding:10px 0;
-    font-size:24px;
+    font-size:30px;
     text-align:center;
     background:#eff4f7;
     border-bottom:1px solid #dde0e7;
@@ -40,6 +42,15 @@ form ul li {
 form ul li:last-child {
     text-align:center;
     margin:20px 0 25px 0;
+}
+input#name {
+    padding:10px 10px;
+    border:1px solid #d5d9da;
+    border-radius:5px;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width:328px; 
+    font-size:1em;
+    outline:0; 
 }
 input#email {
     padding:10px 10px;
@@ -70,7 +81,7 @@ input#pswd{
     outline:0; 
 }
 
-input#pswd-repeat{
+input#pswdRepeat{
     padding:10px 10px;
     border:1px solid #d5d9da;
     border-radius:5px;
@@ -99,7 +110,7 @@ label {
 }
 button {
 
-    background: -webkit-linear-gradient(top, #57a9eb 0%,#3a76c4 100%); /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top, #57a9eb 0%,#3a76c4 100%); 
     border:1px solid #326fa9;
     border-top-color:#3e80b1;
     border-bottom-color:#1e549d;
@@ -113,10 +124,14 @@ button {
 }
 button:active {
 
-    background: -webkit-linear-gradient(top, #3a76c4 0%,#57a9eb 100%); /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(top, #3a76c4 0%,#57a9eb 100%); 
     box-shadow:none;
     text-shadow:0 -1px 0 #1e3c5e;
 }
 .Color{
 	color:green;
-		}
+}
+#passwordStrength{
+	background-color:#d5d9da;
+	text-align:center;
+}

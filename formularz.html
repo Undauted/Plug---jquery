@@ -13,7 +13,11 @@
 		<form>
 			<ul>
 				<li>
-					<label for="username">Email:</label>
+					<label for="name">Name:</label>
+					<span><input id="name" name="name" type="text" /></span>
+				</li>
+				<li>
+					<label for="email">Email:</label>
 					<span><input id="email" name="email" type="text" /></span>
 				</li>
 				<li>
@@ -23,14 +27,17 @@
 				<li>
 					<label for="pswd">Password:</label>
 					<span><input id="pswd" type="password" name="pswd" /></span>
+					<label for="pswd">Password strength:</label>
+					<span id="passwordStrength">0%</span>
 				</li>
 				<li>
 					<label for="pswd">Repeat password:</label>
-					<span><input id="pswd-repeat" type="password" name="pswd-repeat" /></span>
+					<span><input id="pswdRepeat" type="password" name="pswd-repeat" /></span>
 				</li>
 				
 				<li>
-					<input id="yes" type="checkbox" name="yes" value="yes"> Confirm<br>
+					<label for="yes">Confirm</label>
+					<input id="yes" type="checkbox" name="yes" value="yes">
 				</li>
 				<li>
 					<button id="button1" type="submit">Register</button>
