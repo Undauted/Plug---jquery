@@ -12,7 +12,7 @@ $(document).ready(function (){
 	$('#pswd').input().addClass("Color");
 	$('#pswd-repeat').input().addClass("Color");
 	
-	$('#username').validateUsername();
-
+	$('#username').patternUsername();
+	$('#email').patternEmail();
 
 });

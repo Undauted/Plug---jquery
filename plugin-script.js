@@ -42,7 +42,7 @@
     };
 	
 	
-	$.fn.validateUsername = function(options) {
+	$.fn.patternUsername = function(options) {
        
         return this.each(function() {
             var settings = $.extend({
@@ -54,6 +54,28 @@
                 if (!$(this).val().match($regexname)) {
                     $(this).siblings('.emsg').show();
                     this.setCustomValidity('Z³a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 3 znaki');
+                }
+                else{
+                    $(this).siblings('.emsg').hide();
+                    this.setCustomValidity('');
+               }
+            });
+           
+        });
+    };
+	
+	 $.fn.patternEmail = function(options) {
+       
+        return this.each(function() {
+            var settings = $.extend({
+                pattern : /^([a-zA-Z0-9_.])+\@(([a-zA-Z0-9])+\.)+([a-zA-Z]{2,4})$/
+            }, options);
+           
+            var $regexname=settings.pattern;
+            $(this).blur(function(){
+                if (!$(this).val().match($regexname)) {
+                    $(this).siblings('.emsg').show();
+                    this.setCustomValidity('Niepoprawny email!');
                 }
                 else{
                     $(this).siblings('.emsg').hide();
