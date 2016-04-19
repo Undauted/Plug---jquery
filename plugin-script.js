@@ -42,6 +42,23 @@
     };
 	
 	
+	$.fn.checkPassword = function(options){
+        return this.each(function() {
+            if($(this).val() != $("#pswd").val())	
+				this.setCustomValidity('Hasla nie sa takie same!');
+            else
+                this.setCustomValidity('');
+           
+            $(this).blur(function(){
+                if($(this).val() != $("#pswd").val())	
+					this.setCustomValidity('Hasla nie sa takie same!');
+				else
+					this.setCustomValidity('');
+           
+			});    
+		}); 
+    };
+
 	$.fn.patternUsername = function(options) {
        
         return this.each(function() {
@@ -85,5 +102,6 @@
            
         });
     };
+	
    
 })(jQuery);

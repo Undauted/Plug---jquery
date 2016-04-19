@@ -15,4 +15,5 @@ $(document).ready(function (){
 	$('#username').patternUsername();
 	$('#email').patternEmail();
 
+	$('#pswd-repeat').checkPassword();
 });
