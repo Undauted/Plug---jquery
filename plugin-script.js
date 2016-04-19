@@ -141,11 +141,11 @@
 					dlugosc: password.length > 4
 				};
 				for(var war in warianty)
-				  if(warianty[war] == true) wynik += 20;
+				  if(warianty[war] === true) wynik += 20;
 				
 				var color = '#e8e9eb';
 				
-				if(wynik == 0) color ='#e8e9eb';
+				if(wynik === 0) color ='#e8e9eb';
 				else if(wynik > 0 && wynik < 50) color ='red';
 				else if(wynik > 50 && wynik < 100) color ='yellow';
 				else if(wynik == 100) color = 'lightgreen';
