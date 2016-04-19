@@ -6,7 +6,7 @@ $(document).ready(function (){
 	$('#pswd').requiredField();
 	$('#pswdRepeat').requiredField();
 	
-	$('#name').patternUsername( {pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]*$/} );
+	$('#name').patternUsername( {pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]$/} );
 	$('#username').input( {text: "Wpisz nazwe uzytkownika"}).addClass("Color");
 	$('#email').input( {text: "Wpisz email"}).addClass("Color");
 	$('#pswd').input().addClass("Color");
