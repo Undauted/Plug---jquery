@@ -14,10 +14,10 @@ ul, li {
     padding:0px;
     background:lightyellow;
     margin:0 auto;
-	margin-top: 10%;
-    border:15px solid #c4cddb;
-    border-top-color:#d3dbde;
-    border-bottom-color:#bfc9dc;
+	margin-top: 5%;
+    border:15px solid lightblue;
+    border-top-color:lightblue;
+    border-bottom-color:lightblue;
     box-shadow: 10px 10px 5px 10px rgba(0,0,0,0.75);
     border-radius:5px;
     position:relative;
@@ -127,6 +127,17 @@ button#button1:active {
     background: -webkit-linear-gradient(top, #3a76c4 0%,#57a9eb 100%); 
     box-shadow:none;
     text-shadow:0 -1px 0 #1e3c5e;
+}
+
+button#button2 {
+
+    background: -webkit-linear-gradient(top, #57a9eb 0%,#3a76c4 100%); 
+    border:1px solid #326fa9;
+    border-top-color:#3e80b1;
+    border-bottom-color:#1e549d;
+    color:#fff;
+    text-shadow:0 1px 0 #1e3c5e;
+    font-size:17px;
 }
 .Color{
 	color:green;

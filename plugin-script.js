@@ -47,13 +47,10 @@
        
     };
 	
-	$.fn.magic = function(options){
-
-		$("#yes").slideUp(2000);
-		$("#confirm").slideUp(2000);
+	$.fn.magic = function(options){	
 		$("#button2").click(function(){
-			$("#yes").css("color", "green").slideDown(2000);
-			$("#confirm").css("color", "green").slideDown(2000);
+			$("#yes").css("color", "red").slideUp(2000).slideDown(2000);
+			$("#confirm").css("color", "red").slideUp(2000).slideDown(2000);
 			
 		});
 		
@@ -72,7 +69,7 @@
             $(this).blur(function(){
                 if($(this).val() != $("#pswd").val()){	
 					this.setCustomValidity('Hasla nie sa takie same!');
-					$(this).css({'border-color' : 'red'});
+					$(this).css({'border' : '2px solid red'});
 				}
 				else{
 					this.setCustomValidity('');
@@ -94,7 +91,7 @@
                 if (!$(this).val().match($regexname)) {
                     $(this).siblings('.emsg').show();
 					$(this).css({'border' : '2px solid red'});
-                    this.setCustomValidity('Z³a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 3 znaki');
+                    this.setCustomValidity('Z³a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 2 znaki');
                 }
                 else{
                     $(this).siblings('.emsg').hide();
