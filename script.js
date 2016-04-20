@@ -7,6 +7,7 @@ $(document).ready(function (){
 	$('#pswdRepeat').requiredField();
 	
 	$('#name').patternUsername( {pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]$/} );
+	$('#name').input( {text: "Wpisz imie"}).addClass("Color");
 	$('#username').input( {text: "Wpisz nazwe uzytkownika"}).addClass("Color");
 	$('#email').input( {text: "Wpisz email"}).addClass("Color");
 	$('#pswd').input().addClass("Color");
@@ -16,6 +17,9 @@ $(document).ready(function (){
 	$('#email').patternEmail();
 	$('#pswd').passwordStrength();
 	$('#pswdRepeat').checkPassword();
+	
+	$('#yes').magic();
+
 	
 	
 });

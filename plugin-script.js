@@ -34,10 +34,12 @@
 			}
             $(this).blur(function(){
                 if($(this).val() === ''){
+					$(this).css({'border' : '2px solid red'});
                     this.setCustomValidity('Pole wymagane!');
 			}
                 else{
                     this.setCustomValidity('');
+					$(this).css({'border-color' : '#d5d9da'});
 				}
             });
            
@@ -45,12 +47,23 @@
        
     };
 	
+	$.fn.magic = function(options){
+
+		$("#yes").slideUp(2000);
+		$("#confirm").slideUp(2000);
+		$("#button2").click(function(){
+			$("#yes").css("color", "green").slideDown(2000);
+			$("#confirm").css("color", "green").slideDown(2000);
+			
+		});
+		
+    };
 	
 	$.fn.checkPassword = function(options){
         return this.each(function() {
             if($(this).val() != $("#pswd").val()){
 				this.setCustomValidity('Hasla nie sa takie same!');
-				$(this).css({'border-color' : 'red'});
+				$(this).css({'border' : '2px solid red'});
 			}
             else{
                 this.setCustomValidity('');
@@ -80,7 +93,7 @@
             $(this).blur(function(){
                 if (!$(this).val().match($regexname)) {
                     $(this).siblings('.emsg').show();
-					$(this).css({'border-color' : 'red'});
+					$(this).css({'border' : '2px solid red'});
                     this.setCustomValidity('Z³a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 3 znaki');
                 }
                 else{
@@ -104,7 +117,7 @@
 			
             $(this).blur(function(){
                 if (!$(this).val().match($regexname)) {
-					$(this).css({'border-color' : 'red'});
+					$(this).css({'border' : '2px solid red'});
                     $(this).siblings('.emsg').show();
                     this.setCustomValidity('Niepoprawny email!');
 					 
@@ -146,11 +159,29 @@
 				var color = '#e8e9eb';
 				
 				if(wynik === 0) color ='#e8e9eb';
-				else if(wynik > 0 && wynik < 50) color ='red';
+				else if(wynik > 0 && wynik < 50){ color ='red'; }
 				else if(wynik > 50 && wynik < 100) color ='yellow';
 				else if(wynik == 100) color = 'lightgreen';
 				$("#passwordStrength").text(wynik + '%');
 				$("#passwordStrength").css('background-color', color);
+				
+				if(wynik < 50){
+					this.setCustomValidity('Has³o za s³abe!');
+				}
+				else{
+					this.setCustomValidity('');
+				}
+				$(this).blur(function(){
+					if(wynik < 50){
+						$(this).css({'border' : '2px solid red'});
+						this.setCustomValidity('Has³o za s³abe!');
+				}
+					else{
+						this.setCustomValidity('');
+						$(this).css({'border-color' : '#d5d9da'});
+					}
+				});
+				
                
             }
         });
