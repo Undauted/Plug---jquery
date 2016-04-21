@@ -1,4 +1,4 @@
-$(document).ready(function (){
+﻿$(document).ready(function (){
 	
 	$('#name').requiredField();
 	$('#username').requiredField();
@@ -6,7 +6,7 @@ $(document).ready(function (){
 	$('#pswd').requiredField();
 	$('#pswdRepeat').requiredField();
 	
-	$('#name').patternUsername( {pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]$/} );
+	$('#name').patternUsername( {pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]{2,}$/} );
 	$('#name').input( {text: "Wpisz imie"}).addClass("Color");
 	$('#username').input( {text: "Wpisz nazwe uzytkownika"}).addClass("Color");
 	$('#email').input( {text: "Wpisz email"}).addClass("Color");

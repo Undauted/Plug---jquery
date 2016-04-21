@@ -1,4 +1,4 @@
-(function($) {
+ï»¿(function($) {
     $.fn.input = function(options) {
        
         return this.each(function() {
@@ -27,18 +27,20 @@
         return this.each(function() {
 			
             if($(this).val() === ''){
-                this.setCustomValidity('Pole wymagane!');
+                this.setCustomValidity('Pole wymagane!');		
 			}
             else{
-                this.setCustomValidity('');
+				this.setCustomValidity('');
 			}
             $(this).blur(function(){
                 if($(this).val() === ''){
 					$(this).css({'border' : '2px solid red'});
                     this.setCustomValidity('Pole wymagane!');
+					$('#button1').attr("disabled", true);
 			}
                 else{
                     this.setCustomValidity('');
+					$('#button1').attr("disabled", false);
 					$(this).css({'border-color' : '#d5d9da'});
 				}
             });
@@ -48,32 +50,40 @@
     };
 	
 	$.fn.magic = function(options){	
+		
+		$("#yes").css("color", "red").slideUp(2000);
+		$("#confirm").css("color", "red").slideUp(2000);
 		$("#button2").click(function(){
-			$("#yes").css("color", "red").slideUp(2000).slideDown(2000);
-			$("#confirm").css("color", "red").slideUp(2000).slideDown(2000);
+			$("#yes").css("color", "red").slideDown(2000);
+			$("#confirm").css("color", "red").slideDown(2000);
 			
 		});
 		
     };
+	
 	
 	$.fn.checkPassword = function(options){
         return this.each(function() {
             if($(this).val() != $("#pswd").val()){
 				this.setCustomValidity('Hasla nie sa takie same!');
 				$(this).css({'border' : '2px solid red'});
+				
 			}
             else{
                 this.setCustomValidity('');
 				$(this).css({'border-color' : '#d5d9da'});
+				
 			}
             $(this).blur(function(){
                 if($(this).val() != $("#pswd").val()){	
 					this.setCustomValidity('Hasla nie sa takie same!');
 					$(this).css({'border' : '2px solid red'});
+					$('#button1').attr("disabled", true);
 				}
 				else{
 					this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
+					$('#button1').attr("disabled", false);
 				}
 			});    
 		}); 
@@ -83,7 +93,7 @@
        
         return this.each(function() {
             var settings = $.extend({
-                pattern : /^[A-Za-z]{1}[A-Za-z0-9]+$/
+                pattern : /^[A-Za-z]{1}[A-Za-z0-9]{2,}$/
             }, options);
            
             var $regexname=settings.pattern;
@@ -91,11 +101,13 @@
                 if (!$(this).val().match($regexname)) {
                     $(this).siblings('.emsg').show();
 					$(this).css({'border' : '2px solid red'});
-                    this.setCustomValidity('Z³a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 2 znaki');
+                    $('#button1').attr("disabled", true);
+					this.setCustomValidity('ZÅ‚a nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 3 znaki');
                 }
                 else{
                     $(this).siblings('.emsg').hide();
-                    this.setCustomValidity('');
+                    $('#button1').attr("disabled", false);
+					this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
                }
             });
@@ -117,12 +129,14 @@
 					$(this).css({'border' : '2px solid red'});
                     $(this).siblings('.emsg').show();
                     this.setCustomValidity('Niepoprawny email!');
+					$('#button1').attr("disabled", true);
 					 
                 }
                 else{
                     $(this).siblings('.emsg').hide();
                     this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
+					$('#button1').attr("disabled", false);
                }
             });
            
@@ -163,7 +177,7 @@
 				$("#passwordStrength").css('background-color', color);
 				
 				if(wynik < 50){
-					this.setCustomValidity('Has³o za s³abe!');
+					this.setCustomValidity('HasÅ‚a za sÅ‚abe!');
 				}
 				else{
 					this.setCustomValidity('');
@@ -171,11 +185,13 @@
 				$(this).blur(function(){
 					if(wynik < 50){
 						$(this).css({'border' : '2px solid red'});
-						this.setCustomValidity('Has³o za s³abe!');
+						this.setCustomValidity('HasÅ‚a za sÅ‚abe!');
+						$('#button1').attr("disabled", true);
 				}
 					else{
 						this.setCustomValidity('');
 						$(this).css({'border-color' : '#d5d9da'});
+						$('#button1').attr("disabled", false);
 					}
 				});
 				
