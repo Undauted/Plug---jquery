@@ -36,11 +36,10 @@
                 if($(this).val() === ''){
 					$(this).css({'border' : '2px solid red'});
                     this.setCustomValidity('Pole wymagane!');
-					$('#button1').attr("disabled", true);
+					
 			}
                 else{
                     this.setCustomValidity('');
-					$('#button1').attr("disabled", false);
 					$(this).css({'border-color' : '#d5d9da'});
 				}
             });
@@ -78,12 +77,12 @@
                 if($(this).val() != $("#pswd").val()){	
 					this.setCustomValidity('Hasla nie sa takie same!');
 					$(this).css({'border' : '2px solid red'});
-					$('#button1').attr("disabled", true);
+					
 				}
 				else{
 					this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
-					$('#button1').attr("disabled", false);
+					
 				}
 			});    
 		}); 
@@ -101,12 +100,10 @@
                 if (!$(this).val().match($regexname)) {
                     $(this).siblings('.emsg').show();
 					$(this).css({'border' : '2px solid red'});
-                    $('#button1').attr("disabled", true);
 					this.setCustomValidity('Zła nazwa uzytkownika! Nazwa musi zaczynac sie od litery i miec 3 znaki');
                 }
                 else{
                     $(this).siblings('.emsg').hide();
-                    $('#button1').attr("disabled", false);
 					this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
                }
@@ -129,14 +126,12 @@
 					$(this).css({'border' : '2px solid red'});
                     $(this).siblings('.emsg').show();
                     this.setCustomValidity('Niepoprawny email!');
-					$('#button1').attr("disabled", true);
 					 
                 }
                 else{
                     $(this).siblings('.emsg').hide();
                     this.setCustomValidity('');
 					$(this).css({'border-color' : '#d5d9da'});
-					$('#button1').attr("disabled", false);
                }
             });
            
@@ -186,12 +181,11 @@
 					if(wynik < 50){
 						$(this).css({'border' : '2px solid red'});
 						this.setCustomValidity('Hasła za słabe!');
-						$('#button1').attr("disabled", true);
 				}
 					else{
 						this.setCustomValidity('');
 						$(this).css({'border-color' : '#d5d9da'});
-						$('#button1').attr("disabled", false);
+						
 					}
 				});
 				
